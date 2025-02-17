@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Trade Policy II</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Bruno Conte" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer-upf.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Trade Policy II
+]
+.subtitle[
+## Topics in Macro V: International Trade and Geography<br><br><br><br><br><br><span style="color:white"> </span>
+]
+.author[
+### Bruno Conte
+]
+.date[
+### Winter 2025
+]
+
+---
+
+
+
+
+&lt;style&gt;
+r { color: rgb(200,16,46) }
+&lt;/style&gt;
+
+# International Trade Policy - Overview
+
+Trade policy debate: focus in &lt;r&gt;**key questions**&lt;/r&gt; like
+
+1. Why are &lt;u&gt;countries protectionist&lt;/u&gt;, and can it be "optimal"?
+
+2. What is the optimal design of *trade agreements* (GATT, WTO, ...)?
+
+3. What are the &lt;r&gt;welfare effects&lt;/r&gt; of trade policy?
+
+--
+
+&lt;u&gt;Questions for our two classes&lt;/u&gt;:
+
+- What is the rationale behind (real-world) trade policy?
+
+- How large (and uneven) are the welfare consequences?
+
+*Today:* policy evaluation; i.e., effects actual trade policy!
+
+---
+
+# Roadmap and logistics
+
+We will answer those questions as follows
+
+~~&lt;u&gt;Class 01&lt;/u&gt;: Introduction to trade policy~~ `\(\text{} \quad \quad \quad \quad \quad \quad \quad \quad\)` **[Feb 14]**
+&lt;br&gt;
+
+&lt;u&gt;Class 02&lt;/u&gt;: Quantitative trade policy `\(\text{} \quad \quad \quad \quad \quad \quad \quad \quad \quad \text{}\)` **[Feb 18]**
+
+- Politically-driven trade policy
+
+- Welfare consequences of trade openness (NAFTA, EU)
+
+- Welfare consequences of trade wars (2018's Trump)
+
+&lt;br&gt;
+
+&lt;u&gt;Throughout&lt;/u&gt;: theory (trade models) + empirics (shift-shares)
+
+
+---
+
+# Main readings
+
+We will base our discussion in the following handbook chapter
+
+&gt; *Caliendo, L. and Parro, F., 2022. &lt;r&gt;Trade policy&lt;/r&gt;. Handbook of international economics, 5, pp.219-295.*
+
+Other references will be covered (and cited) throughout the class
+
+--
+
+**&lt;r&gt;Any questions?&lt;/r&gt;**
+
+---
+class: inverse, center, middle
+count: false
+
+# Back to trade policy: Is real-world
+
+# Trade Policy "Optimal"?
+
+---
+
+# International Trade Policy - Introduction
+
+We covered the theory behind &lt;r&gt;optimal tariffs&lt;/r&gt; `\(t^*\)`
+
+- If home can manipulate terms of trade, `\(t^* &gt;0\)`
+
+- &lt;u&gt;Intuition&lt;/u&gt;: foreign exporters (partially) absorb the `\(\uparrow\)` costs
+
+However one wonders
+
+- What objective do governments aim at when setting `\(t\)`?
+
+  - Consumer/producer welfare, politics, ...
+
+- If not"optimal", what are the effects of real-world `\(t\)`?
+
+---
+
+# Politically-driven Trade Policy
+
+&lt;u&gt;One explanation&lt;/u&gt;: governments being influenced by lobby.
+
+Grossman and Helpman (GH) "Protection for Sale" (1994)&lt;sup&gt;+&lt;/sup&gt;:
+
+- `\(\neq\)` sectors who put effort (lobby) to manipulate trade policy
+
+- Influence factual `\(t \neq t^* \rightarrow\)` economic inefficiencies
+
+Does that &lt;r&gt;happen in reality?&lt;/r&gt; `\(\rightarrow\)` Goldberg and Maggi (1999)
+
+.footnote[
+[+] The following is based on Dave Donaldson and Arnaud Costinot's "Trade Policy" class notes, to whom I am very greatful.
+]
+
+---
+
+# Protection for Sale (GH, 1994)
+
+Consider a &lt;u&gt;small open economy&lt;/u&gt; that produces `\(n+1\)` goods `\(i = 0,..., n\)`
+
+- Perfect competition, but `\(t^* &gt;0\)` (why?)
+
+- Ad-valorem `\(t \rightarrow p_i = p_i^* \times (1+t_i)\)`
+
+- As before, `\(p_i  \equiv\)` domestic `\(i\)` prices
+
+Home is endowed with `\(e_i\)` units (think about productivity)
+
+- `\(i\)`-individuals have `\(e_i +\)` 1 unit of `\(e_0\)`
+
+- Number of individuals in the economy is normalized to 1
+
+- `\(\alpha_i \equiv\)` share of `\(i\)`'s endowment
+
+---
+
+# Protection for Sale (GH, 1994)
+
+Assume homogeneous preferences across `\(i\)`-individuals:
+`$$W = x_0 + \sum_{i=1}^n u_i(x_i),$$`
+where `\(x_i \equiv\)` consumption of `\(i\)`-goods. Indirect utility:
+`$$V_i(\mathbf{p}) = 1 + p_i + t(\mathbf{p}) + s(\mathbf{p})$$`
+where:
+
+- `\(1+p_i \equiv\)` value of endowmend `\(e_0 + e_i\)`
+
+- `\(t(\mathbf{p}) \equiv\)` government's transfer (to be defined)
+
+- `\(s(\mathbf{p}) = \sum_{i=1}^n u_i(d_i(p_i)) - \sum_{i=1}^n p_id_i(p_i) \equiv\)` consumer `\(i\)`'s surplus 
+
+---
+
+# Protection for Sale (GH, 1994)
+
+## Policy Instruments
+
+Government's choice is `\(\mathbf{p} = [p_i]' \equiv \{ (1+t_i) p_i^* \}_i\)`
+
+Hence, government tax revenue is:
+`$$t(\mathbf{p}) = \sum_{i=1}^n (p_i - p_i^*) \times \underbrace{d_i(p_i) - \alpha_i}_{m_i(p_i)}$$`
+
+&lt;u&gt;Transfers&lt;/u&gt;: `\(t(\mathbf{p})\)` is homogenously distributed among the population
+
+---
+
+# Protection for Sale (GH, 1994)
+
+## Lobbies
+
+A number `\(L\)` of sectors `\(i\)` are organized in lobbies (exogenous)
+
+Each lobby `\(i\)` &lt;r&gt;chooses contribution&lt;/r&gt; `\(C_i\)` to maximize individual `\(i\)`'s net welfare
+`$$\max_{C_i} \alpha_i V_i(\mathbf{p}) - C_i(\mathbf{p}) \quad \text{subject to: } \\ \mathbf{p} = \arg \max_{\mathbf{p}} G(\mathbf{p}),$$`
+where `\(G(\mathbf{p}) \equiv\)` government's objective function (coming)
+
+---
+
+# Protection for Sale (GH, 1994)
+
+## Government
+
+The government observe contributions `\(C_i\)` and chooses domestic prices
+`$$\max_{\mathbf{p}} G(\mathbf{p}) \equiv \sum_{i \in L} C_i + W(\mathbf{p}), \text{ where} \\ W(\mathbf{p}) = \sum_{n=1}^n \alpha_i V_i(\mathbf{p})$$`
+That is, the government aims at &lt;r&gt;maximizing contributions&lt;/r&gt; and social welfare.
+
+---
+
+# Protection for Sale (GH, 1994)
+
+Hence, government choices affect &lt;r&gt;multiple dimensions&lt;/r&gt;:
+
+- Choice of `\(\mathbf{p}\)` affects welfare `\(V_i(\mathbf{p})\)` directly
+
+- It also affects contributions `\(C_i(\mathbf{p})\)`
+
+- Which in turn affects optimal choice of `\(\mathbf{p}\)`
+
+Interaction between &lt;u&gt;contribution and welfare max.&lt;/u&gt; `\(\rightarrow\)` SPNE
+
+- Government's problem `\(\sim\)` common agency problem (multiple principals `\(\equiv\)` lobbies)
+
+---
+
+# Protection for Sale (GH, 1994) - Takeaways
+
+&lt;u&gt;Main prediction&lt;/u&gt;: &lt;r&gt;protection `\(t_i&gt;0\)` &lt;/r&gt;if sectors `\(i\)` has a lobby, but
+`$$t_i \propto \frac{e_i - \alpha_L}{\alpha_L} \times \left( X_i / -M_i \right), \quad \quad (1)$$`
+where `\(\alpha_L = \sum_{i \in L} \alpha_i\)` and `\(X_i\)` `\((M_i)\)` are `\(i\)` sector's exports (imports)
+
+That is, optimal tariffs &lt;u&gt;decreases with import penetration&lt;/u&gt;
+
+- It `\(\downarrow\)` benefits from lobby and `\(\uparrow\)` cost to society
+
+---
+
+# Protection for Sale (GH, 1994) - Takeaways
+
+Denoting `\(z_i = X_i / M_i\)`, one can rewrite (1) as
+`$$\frac{t_i}{1 + t_i} \propto \frac{e_i - \alpha_L}{\alpha_L} \times \left( z_i / e_i \right). \quad  \quad (2)$$`
+
+That is, `\(t_i\)` &lt;u&gt;decreases with import demand elasticity&lt;/u&gt; `\(e_i\)`
+
+- &lt;u&gt;Reason&lt;/u&gt;: Deadweight loss of protection is larger
+
+- It `\(\uparrow\)` damage domestic consumers
+
+--
+
+&lt;br&gt;
+
+Does this **&lt;r&gt;happen in reality?&lt;/r&gt;**
+
+---
+class: inverse, center, middle
+count: false
+
+# Is Protection for Sale?
+
+# (Goldberg and Maggi, 1999)
+
+---
+
+# Is Protection for Sale? (GM, 1999)
+
+GH (1994)'s results were very influential on the politics-tariff discussion
+
+&gt; *Goldberg and Maggi (GM, 1999)'s &lt;r&gt;"Protection for Sale: An Empirical Investigation"&lt;/r&gt;*
+
+Examines that empirically (US, mid-1980s) with data
+
+- Bilateral trade flows across 3-digit `\(i\)` sectors
+
+- Trade policy choices across `\(i\)` sectors
+
+- Lobby contributions by `\(i\)` sectors
+
+&lt;u&gt;Answer&lt;/u&gt;: GH's main results seem to hold in reality!
+
+---
+
+# Is Protection for Sale? (GM, 1999)
+
+Empirical specification: manipulating (2), one obtains:
+`$$\frac{t_i}{1+t_i} e_i = \gamma \frac{X_i}{M_i} + \delta I_i \frac{X_i}{M_i} + \varepsilon_i,$$`
+where `\(I_i \equiv\)` dummy for `\(i \in L\)` and
+
+- `\(\gamma \propto -\alpha_L / (\mu + \alpha_L)\)`
+
+- `\(\delta \propto 1 / (\mu + \alpha_L)\)`,
+
+GH predicts that `\(\gamma&lt;0\)`, `\(\delta&gt;0\)`, and `\(\gamma+\delta&gt;0\)`
+
+
+---
+
+# Is Protection for Sale? (GM, 1999)
+
+.center[
+&lt;img src="figs/gm1.png" style="width: 90%" /&gt;
+]
+
+---
+
+# Is Protection for Sale? Takeaways
+
+GH + GM's results `\(\rightarrow\)` non-welfare enhacing motivations behind trade policy choices
+
+- Political interference generates deadweight
+
+Moreover, in a multicountry setting, &lt;u&gt;strategic interaction&lt;/u&gt; (e.g., retaliation) is crucial
+
+- Active area of research in the 80s
+
+---
+
+# Is Protection for Sale? Takeaways
+
+Therefore, one wonders:
+
+&gt; *"Can political-economy motives explain trade agreements beyond improving the terms-of-trade (i.e., optimal tariff theory)?"*
+
+&lt;u&gt;Ambiguous results&lt;/u&gt; based on market structure
+
+- Ossa (2011): yes
+
+- Bagwell and Staiger (2009): no
+
+A crucial point is that trade agreements must be &lt;r&gt;stable coalitions&lt;/r&gt;
+
+- Normative (Pareto-improving) assessment of WTO: Ossa (2014)
+
+---
+class: inverse, center, middle
+count: false
+
+# Trade Policy Beyond Optimal Tariffs
+
+# Quantitative Assessment of Real-World Policy
+
+---
+
+# Recalling the Welfare Effects of Trade Policy
+
+Many reasons to believe that &lt;u&gt;actual trade policy&lt;/u&gt; is far from ideal.
+
+Hence, what are the (welfare) consequences of it? Recalling
+`$$\frac{dW}{dt} = \underbrace{t \frac{dm}{dp}\frac{dp}{dt}}_{\Delta\text{tariff revenue}} - \underbrace{m \frac{dp^*}{dt}}_{\Delta \text{terms trade}} + \underbrace{[p - C'(y)] \frac{dy}{dt}}_{\Delta \text{prod. surplus}}$$`
+can one infer &lt;r&gt;past policies'&lt;/r&gt; `\(dW/dt\)`? Two approaches:
+
+- Quantitative (trade models + counterfactuals)
+
+- Empirical (data + shift share designs)
+
+We will cover these with two examples (trade liberalization/war)
+
+
+---
+
+# Welfare Effects of Trade Liberalization
+
+The decades between 1990-2010: important trade liberalization episodes
+
+1. North America's NAFTA (Caliendo and Parro, 2015)
+
+2. Brazil (Dix-Carneiro, 2014; Ruggieri, 2019)
+
+3. EU (Caliendo et al., 2021)
+
+- ...
+
+&lt;u&gt;This class&lt;/u&gt;: overview of point 1.
+
+---
+
+# NAFTA's Welfare Effects (CP, 2015)
+
+&lt;u&gt;North American Free Trade Agreement&lt;/u&gt; (NAFTA):
+
+- (almost) free trade agreement between the USA, Canada, and Mexico
+
+- In place between 1994-2018
+
+Did `\(t=0 \rightarrow\)` welfare gains? **Quantitative question!**
+
+&gt; *Caliendo and Parro (CP, 2015)'s &lt;r&gt;"Estimates of the Trade and Welfare Effects of NAFTA"&lt;/r&gt;*
+
+- Quantitative approach: data + model = counterfactuals
+
+---
+
+# NAFTA's Welfare Effects (CP, 2015)
+
+&lt;u&gt;Main additions&lt;/u&gt;: consider international + &lt;r&gt;intra-industry trade&lt;/r&gt; in a multi-sector setting
+
+- Industries purchase inputs from other sectors
+
+- Non-tradable industries: affected by `\(t\)` through purchased intermediates
+
+Hence, `\(\Delta W\)` depends on interconnection of the economy
+
+
+*Today*: overview of CP (2015)'s methodology and big-picture takeaways
+
+- Technicalities in the classes to come!
+
+---
+
+# NAFTA's Welfare Effects (CP, 2015)
+
+&lt;u&gt;Challenge for inference&lt;/u&gt;: we only observe outcomes with NAFTA
+
+- How to infer `\(\Delta\)` outcomes without a counterfactual?
+
+CP (2015): &lt;r&gt;simulations with a structural trade model&lt;/r&gt;. Define
+`$$W_i \equiv f(\theta,\mathbf{X}, \mathbf{t})$$`
+the model-based welfare outcome in region-sector `\(i\)` based on
+
+- Exogenous (structural) parameters `\(\theta\)` (e.g., elasticites)
+
+- Fundamentals/primitives `\(\mathbf{X}\)` (e.g., productivities, market access)
+
+- Policy choices `\(\mathbf{t} \equiv\)` tariffs
+
+---
+
+# NAFTA's Welfare Effects (CP, 2015)
+
+CP (2015) infer `\(\Delta W_i\)` with a &lt;u&gt;hat algebra&lt;/u&gt; method:
+`$$\Delta W_i \equiv \hat{W}_i = \frac{W'_i}{W_i} = \frac{f(\theta,\mathbf{X}, \mathbf{t}')}{f(\theta,\mathbf{X}, \mathbf{t})}$$`
+
+That is, `\(\hat{W}_i \equiv\)` % change in `\(i\)`'s welfare due to `\(\Delta \mathbf{t}\)` only
+
+- Structural approach to policy evaluation!
+
+--
+
+Crucial aspect of hat algebra: `\(\hat{W}_i \equiv g(\theta, \hat{\mathbf{t{}}})\)`
+
+- It does not depend on time-invariant fundamentals
+
+- In line with rising "gains from trade" field (e.g., ACR)
+
+---
+
+# NAFTA's Welfare Effects (CP, 2015)
+
+In practice, CP (2015) features 40 countries + 30 sectors:
+
+- `\(i \equiv 40 \times 30\)` combinations
+
+- Novel method for estimating `\(i\)`-relevant (or country-relevant) parameters `\(\theta\)`
+
+**&lt;r&gt;With NAFTA's&lt;/r&gt;** `\(\hat{\mathbf{t}}\)` between 2005 and 1993, infer `\(\hat{W}_i\)`:
+
+- Baseline comparison (with and without NAFTA)
+
+- Hypothetical scenario without other RTA
+
+- Hypothetical structures of economy (e.g., one sector)
+
+---
+
+# NAFTA's Welfare Effects (CP, 2015)
+
+## Uneven `\(W_i\)` across countries
+
+.center[
+&lt;img src="figs/cp1.png" style="width: 120%" /&gt;
+]
+
+- US and Mexico benfitted, Canada lost (why?)
+
+---
+
+## Uneven `\(W_i\)` across sectors
+
+.center[
+&lt;img src="figs/cp2.png" style="width: 95%" /&gt;
+]
+
+---
+
+# NAFTA's Welfare Effects (CP, 2015)
+
+## Different `\(W_i\)` if ignoring intra-industry richness
+
+.center[
+&lt;img src="figs/cp3.png" style="width: 95%" /&gt;
+]
+
+- Ignoring input-output structure of (real-world) economy &lt;u&gt;underestimates gains&lt;/u&gt;
+
+---
+
+# NAFTA's Welfare Effects (CP, 2015)
+
+CP (2015):neat example of quantitative evaluation in trade policy
+
+- One example among many, see Caliendo et al. (2021) for `\(W_i\)` of EU's enlargement, ...
+
+- Consistent with trade-related research in 2000-2015
+
+  - Evaluating real-world episodes of &lt;u&gt;trade liberalization&lt;/u&gt;
+
+--
+
+But what about recent **&lt;r&gt;changes in international trade policy?&lt;/r&gt;**
+
+- What about current US trade ~~war~~ competition with the ROW?
+
+---
+class: inverse, center, middle
+count: false
+
+# Back to Autarky: Welfare
+
+# Consequences of Trade Wars
+
+---
+
+# Welfare Effects of Trade Wars
+
+ &gt; *Fajgelbaum et al. (2020) Fajgelbaum, P.D., Goldberg, P.K., Kennedy, P.J. and Khandelwal, A.K., 2020. &lt;r&gt;The return to protectionism&lt;/r&gt;. The Quarterly Journal of Economics.*
+
+- U.S. raised tariffs on 12% of its imports
+
+  - Average `\(t \uparrow\)` from 2% to 16%
+
+- &lt;r&gt;Trade partners retaliated:&lt;/r&gt; `\(\uparrow t\)` on 8.2% of U.S. exports
+
+  - Average `\(t \uparrow\)` from 7% to 20%
+
+Largest return to protectionism since post-war, very relevant in &lt;u&gt;these days&lt;/u&gt;!
+
+Fajgelbaum et al. (2020): &lt;u&gt;empirical&lt;/u&gt; and structural inference
+
+---
+
+## Import News
+
+.center[
+&lt;img src="figs/fajgelbaum1.png" style="width: 90%" /&gt;
+]
+
+---
+
+## Export News
+
+.center[
+&lt;img src="figs/fajgelbaum2.png" style="width: 85%" /&gt;
+]
+
+---
+
+# Trump's Trade War Effect - `\(\Delta\)` Tariffs
+
+.center[
+&lt;img src="figs/fajgelbaum3.png" style="width: 80%" /&gt;
+]
+
+---
+
+# Trump's Trade War Effect - `\(\Delta\)` Retaliatory Tariff
+
+.center[
+&lt;img src="figs/fajgelbaum4.png" style="width: 80%" /&gt;
+]
+
+---
+
+# Trump's Trade War Effect - `\(\Delta\)` Tariff and Election Support
+
+.center[
+&lt;img src="figs/fajgelbaum6.png" style="width: 80%" /&gt;
+]
+
+---
+
+# Welfare Effects of Trade Wars
+
+&lt;u&gt;Setting&lt;/u&gt;: short-term effects (2017-2019), rich product-level anaylsis
+
+**&lt;r&gt;Main takeaways:&lt;/r&gt;**
+
+- `\(\downarrow\)` 30% of targetted products
+
+- Near-to-complete tariff passthrough (why important)?
+
+--
+
+- Consumer loss `\(\sim 30\)`%, neglegible aggregate GDP effects
+
+&lt;u&gt;Politics&lt;/u&gt;:
+
+- `\(\uparrow\)` import protection in electorally important counties!
+
+- Republican counties mostly affected through retaliation
+
+---
+
+# Welfare Effects of Trade Wars - Empirics
+
+&lt;u&gt;Empirical inference&lt;/u&gt; usually rely on shift-share frameworks
+
+Given an outcome `\(y_i\)`, infer `\(\Delta y_i\)` with (see Caliendo and Parro, 2022)
+`$$y_i = \alpha X_i + \alpha_1 \underbrace{\sum_j \omega_j Z_j}_{T_i \equiv\text{tariff change}} + \epsilon_i,$$`
+where `\(T_i \equiv\)` weighted average of sector `\(j\)`-specific tariff changes `\(Z_i\)`
+
+- In a time-varying setting, enrich specification with FE
+
+More: Kovak (2013), Topalova (2010), Amiti et al. (2021), Cavallo et al. (2021), ...
+
+---
+
+# Welfare Effects of Trade Wars - Empirics
+
+Fajgelbaum et al. (2020) product `\(p\)`-, month `\(t\)`-level data across counties `\(i\)` &lt;r&gt;in a event study:&lt;/r&gt;
+`$$y_{ipt} = \sum_{j = -6}^{3} \alpha_j I(\uparrow\text{tariff}=j)_{ip} + \\ \quad \quad \quad \quad \quad \quad\sum_{j = -6}^{3} \beta_j I(\uparrow\text{tariff}=j)_{ip} \times \text{target}_{ip} + \\ + \text{FEs} + \epsilon_{ipt}$$`
+`\(\beta_j \equiv\)` coefficient of interest (why?)
+
+---
+
+# Welfare Effects of Trade Wars - Empirics
+
+.center[
+&lt;img src="figs/fajgelbaum5.png" style="width: 80%" /&gt;
+]
+
+Takeaway: almost full (short-term) passthrough!
+
+---
+
+# Welfare Effects of Trade Wars - Quantitative
+
+Based on these insigths, use a &lt;r&gt;quantitative trade model&lt;/r&gt;
+
+- Study retaliatory effect
+
+- Study uneven, electorally-biased retaliation response
+
+- Analogous "hat-algebra" approach
+
+Clear example of empirics+theory to answer &lt;u&gt;policy-relevant counterfactual&lt;/u&gt; questions
+
+Short-term, static nature is a "drawback"
+
+- Dynamic settings (e.g., Caliendo et al., 2019) coming soon!
+
+
+
+---
+
+# Trade Policy - Takeaways
+
+&lt;u&gt;Theoretical policy&lt;/u&gt;:
+
+- Welfare gains from unilateral import tariffs over surprisingly large range
+
+- Welfare effects of large unilateral tariffs on other countries can be neglegible
+
+&lt;u&gt;Actual policy&lt;/u&gt;:
+
+- Observed and implemented policies `\(\rightarrow \neq\)` welfare effects
+
+- Usually uneven, unfair, and undesired from welfare standpoint
+
+Rich toolbox (empirics, quantitative) + policy-relevant questions
+
+- Hope to inspire your future research!
+
+---
+class: inverse, center, middle
+count: false
+
+# Thank you!
+
+## bruno.conte@upf.edu
+
+---
+
+# References
+
+- Bagwell, K. and Staiger, R.W., 2009. Delocation and trade agreements in imperfectly competitive markets (No. w15444). National Bureau of Economic Research.
+
+- Caliendo, L., and Parro, F. 2015. Estimates of the Trade and Welfare Effects of NAFTA. *The Review of Economic Studies*, 82(1), 1-44. 46-80.
+
+- Caliendo, L. and Parro, F., 2022. Trade policy. *Handbook of International Economics*, 5, pp.219-295.
+
+- Caliendo, L., Opromolla, L.D., Parro, F. and Sforza, A., 2021. Goods and factor market integration: A quantitative assessment of the EU enlargement. *Journal of Political Economy*, 129(12), pp.3491-3545.
+
+
+---
+
+# References
+
+- Dix‐Carneiro, R., 2014. Trade liberalization and labor market dynamics. *Econometrica*, 82(3), pp.825-885.
+
+- Fajgelbaum, Goldberg, Khandelwal, Kennedy 2020 The Return to Protectionism, *The Quarterly Journal of Economics*.
+
+- Felix, M., 2021. Trade, labor market concentration, and wages. Job Market Paper.
+
+- Goldberg, P. K., and Maggi, G. 1999. Protection for sale: An empirical investigation. *American Economic Review*, 89(5), 1135-1155.
+
+- Grossman, G. M., and Helpman, E. 1994. Protection for Sale. *The American Economic Review*, 84(4), 833–850.
+
+---
+
+# References
+
+- Ossa, R., 2011. A "new trade" theory of GATT/WTO negotiations. *Journal of Political Economy*, 119(1), pp.122-152.
+
+- Ossa, R., 2014. Trade wars and trade talks with data. *American Economic Review*, 104(12), pp.4104-4146.
+
+- Ruggieri, A., 2019. Trade and labour market institutions: A tale of two liberalizations. Working Paper.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
