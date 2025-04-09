@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Trade, Geography, and the Environment II</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Bruno Conte" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer-upf.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Trade, Geography, and the Environment II
+]
+.subtitle[
+## Topics in Macro VI: International Trade and Geography<br><br><br><br><br><br><span style="color:white"> </span>
+]
+.author[
+### Bruno Conte
+]
+.date[
+### Spring 2025
+]
+
+---
+
+
+
+
+&lt;style&gt;
+r { color: rgb(200,16,46) }
+&lt;/style&gt;
+
+# Roadmap and logistics
+
+
+~~&lt;u&gt;Class 01&lt;/u&gt;: Introduction, Trade+Environment `\(\text{} \quad \quad \quad \quad \quad \text{ }\)` **[Apr 07]**~~
+
+&lt;br&gt;
+
+&lt;u&gt;Class 02&lt;/u&gt;: Urban and Environment `\(\text{}\quad \quad \quad \quad \quad \quad \quad \quad \quad \text{}\)` **[Apr 10]**
+
+- How does the environment (spatially) affect cities?
+
+&lt;br&gt;
+
+&lt;u&gt;Class 03&lt;/u&gt;: Quantitative spatial+envir. `\(\text{} \quad \quad \quad \quad \quad \quad \quad \quad \text{}\)` **[Apr 11]**
+
+---
+
+# Cities and the Environment (or vice-versa)
+
+Last class covered the economy `\(\rightarrow\)` environment link
+
+- Trade-related mechanisms linking economic activity `\(\rightarrow\)` CO2
+
+&lt;u&gt;This class&lt;/u&gt; focuses on the environment `\(\rightarrow\)` economy link
+
+We are interested in questions like
+
+&gt; *How does the &lt;r&gt;environment interact with the spatial forces&lt;/r&gt; that shape cities?*
+
+---
+
+# Cities and the Environment (or vice-versa)
+
+Focus on two &lt;u&gt;environment-cities&lt;/u&gt; dimensions:
+
+- &lt;r&gt;Pollution-amenity&lt;/r&gt; link, spatial sorting, and segregation
+
+&gt; *Heblich et al. (2021). East-side story: Historical pollution and persistent neighborhood sorting.*
+
+- &lt;r&gt;Coastal flooding&lt;/r&gt; `\(\leftrightarrow\)` urban development
+  
+  - Exposure to future climate driven by moral hazard
+  
+&gt; *Hsiao (2023). Sea level rise and urban adaptation in Jakarta. Working Paper.*
+
+**Idea:** one paper looking back in time, another looking ahead!
+
+- &lt;u&gt;Both papers&lt;/u&gt;: important &lt;r&gt;question + model + data&lt;/r&gt; = answer
+
+---
+class: inverse, center, middle
+count: false
+
+# Cities and the Environment:
+
+# Pollution, Sorting, and Segregation
+
+---
+
+# Pollution, Cities, and Segregation
+
+Canonical model of within-city location choices
+`$$U_{ij}(\omega) = z_{ij}(\omega) \times B_i \times d_{ij}^{-1} \times  c_{ij}(\omega)^\beta l_{ij}(\omega)^{(1-\beta) }.$$`
+
+How does &lt;r&gt;pollution affect cities?&lt;/r&gt;
+
+- How does it interact with spatial forces that shape cities?
+
+--
+
+- Pollution `\(\equiv\)` disamenity `\(\rightarrow B_i \equiv f(\text{pollution})\)`
+
+How does that (dynamically) &lt;u&gt;affect the shape of cities&lt;/u&gt;?
+
+- Temporary amenity shock + sorting = persistence/segregation
+
+&lt;u&gt;Heblich et al. (2023)&lt;/u&gt;: UK cities during/after the industrial revolution
+
+---
+
+# Historical Background, Identification, and Data
+
+&lt;u&gt;Setting&lt;/u&gt;: 1800s UK, &lt;r&gt;industrial revolution&lt;/r&gt; (coal-based, `\(\uparrow\)` pollution)
+
+.center[&lt;img src="figs/heblich1.png" style="width: 100%" /&gt;]
+
+&lt;u&gt;Fact&lt;/u&gt;: Polluted neighborhoods today `\(\rightarrow\)` low income/skill/...
+
+- Is there a **causal** pollution `\(\rightarrow\)` city structure link?
+
+---
+
+# Historical Background, Identification, and Data
+
+&lt;u&gt;Challenge 1&lt;/u&gt;: inexistent data on historical pollution
+
+- &lt;u&gt;Challenge 2&lt;/u&gt;: even if so, historical data on city structure is rare
+
+- &lt;u&gt;Challenge 3&lt;/u&gt;: even if so, identification (location is not random)
+
+- &lt;u&gt;Challenge 4&lt;/u&gt;: even if not, does past pollution `\(\leftrightarrow\)` outcomes today?
+
+&lt;br&gt;
+
+Heblich et al. (2023) overcome these challenges by
+
+- Collecting rich historical data from archives
+
+- Clever identification strategy
+
+- &lt;r&gt;Dynamic city model&lt;/r&gt; `\(\rightarrow\)` past outcomes to today
+
+---
+
+# Historical Background, Identification, and Data
+
+&lt;u&gt;Challenge 1&lt;/u&gt;: within-city pollution data (200 years ago)?
+
+.center[
+&lt;img src="figs/heblich4.png" style="width: 100%" /&gt;
+]
+
+&lt;r&gt;Industrial chimneys from historical maps&lt;/r&gt; (70 cities, &gt;5K chimneys)
+
+---
+
+# Historical Background, Identification, and Data
+
+&lt;u&gt;Challenge 1&lt;/u&gt;: within-city pollution data (200 years ago)?
+.pull-left[
+&lt;img src="figs/heblich2.png" style="width: 100%" /&gt;
+]
+.pull-right[
+&lt;img src="figs/heblich3.png" style="width: 80%" /&gt;
+]
+
+&lt;r&gt;Chimneys' location + dispersion model&lt;/r&gt; = neighb. with `\(\uparrow\)` pollution
+
+- Immense data collection + data science
+
+---
+
+&lt;u&gt;Challenge 1&lt;/u&gt;: How does the average UK city looked like (1880 ca.)?
+
+.center[
+&lt;img src="figs/heblich5.png" style="width: 90%" /&gt;
+]
+
+Average wind direction + topography `\(\rightarrow\)` &lt;r&gt;more pollution NE&lt;/r&gt;
+
+---
+
+&lt;u&gt;Challenge 2&lt;/u&gt;: How does that compare with city structure (1880 ca.)?
+
+.center[
+&lt;img src="figs/heblich6.png" style="width: 90%" /&gt;
+]
+
+Census data (zipcode-level, by occupation) = &lt;r&gt;East-Side Story&lt;/r&gt;
+
+---
+
+&lt;u&gt;Challenge 3&lt;/u&gt;: Can we claim that pollution `\(\rightarrow\)` segregation?
+
+--
+
+.center[&lt;img src="https://brunoconteleite.github.io/08-geospatial-ds-bse/figs/yanos_1.png" style="width: 100%" /&gt;]
+
+&lt;r&gt;East-Side Story&lt;/r&gt; seems to hold only after ind. rev. **Any thoughts?**
+
+---
+
+# Historical Background, Identification, and Data
+
+&lt;u&gt;Challenge 3&lt;/u&gt;: Can we claim that pollution `\(\rightarrow\)` segregation?
+
+.center[&lt;img src="figs/heblich7.png" style="width: 100%" /&gt;]
+
+Workers sort closer to chimneys, but more so NE. **&lt;r&gt;Endogeneity?&lt;/r&gt;**
+
+---
+
+# Historical Background, Identification, and Data
+
+&lt;u&gt;Challenge 3&lt;/u&gt;: Can we claim that pollution `\(\rightarrow\)` segregation?
+
+Our interest: `\(\text{low skill share}_{i} \equiv Y_{i}\)` in zipcode `\(i\)`
+`$$Y_{i} = \alpha + \beta P_i + \gamma X_i + \delta_c + \varepsilon_{i},$$`
+where `\(P_i \equiv\)` pollution measure, `\(X_i \equiv\)` controls, and `\(c \equiv\)` city.
+
+&lt;br&gt;
+
+&lt;u&gt;Endogeneity&lt;/u&gt; issues:
+
+- Unobserved amenities `\(\not\perp\)` (chimney location, low-skilled sorting)
+
+- Reverse causality (how?)
+
+Addressed with an IV `\(\rightarrow\)` &lt;r&gt;exogenous pollution&lt;/r&gt;. How?
+
+---
+
+# Historical Background, Identification, and Data
+
+&lt;u&gt;Insight&lt;/u&gt;: factories need boilers, which need **water**
+
+- Instrument: `\(PP_i \equiv\)` pollution generated by &lt;r&gt;randomly placed chimneys along waterways&lt;/r&gt;
+
+&lt;u&gt;Intuition&lt;/u&gt;: conditional on distance to water, `\(PP_{i}\)` satisfies (why?)
+
+`$$PP_{i} \perp (\text{amenities, politically favoured neighb.}).$$`
+
+&lt;br&gt;
+
+Thus, one has a first stage as
+
+`$$P_i = a + b PP_i + c X_i + d_c + \varepsilon_i$$`
+
+---
+
+# Historical Background, Identification, and Data
+
+.center[&lt;img src="figs/heblich8.png" style="width: 100%" /&gt;]
+
+---
+
+# Historical Background, Identification, and Data
+
+Panel (c) `\(\equiv PP_i\)`, Panel (c) `\(\equiv P_i\)`
+
+.center[&lt;img src="figs/heblich9.png" style="width: 100%" /&gt;]
+
+---
+
+# Industrial Pollution and Sorting: Results
+
+.center[&lt;img src="figs/heblich10.png" style="width: 100%" /&gt;]
+
+---
+
+.center[&lt;img src="figs/heblich11.png" style="width: 100%" /&gt;]
+
+Causal pollution `\(\rightarrow\)` sorting relationship (pollution `\(\equiv \text{ } \downarrow\)` amenity)!
+
+---
+
+# Industrial Pollution and Sorting: So What?
+
+These results are impressively obtained, but &lt;u&gt;are they meaningful?&lt;/u&gt;
+
+- What is the "value" of pollution `\(\equiv\)` negative amenity shock?
+
+--
+
+The answer is &lt;r&gt;**persistence:**&lt;/r&gt; this holds until nowadays!
+
+.center[&lt;img src="figs/heblich12.png" style="width: 100%" /&gt;]
+
+---
+
+.center[&lt;img src="figs/heblich13.png" style="width: 100%" /&gt;]
+
+How can that be, if pollution starkingly `\(\downarrow\)` after 1970s?
+
+
+---
+
+# Industrial Pollution and Sorting
+
+&lt;u&gt;Answer&lt;/u&gt;: &lt;r&gt;mobility frictions + sorting&lt;/r&gt; `\(\rightarrow\)` segregation `\(\rightarrow\)` persistence
+
+- Powerfull idea: temporary shock `\(\rightarrow\)` divergent city development
+
+&lt;br&gt;
+
+How much does that account for &lt;u&gt;present day segregation&lt;/u&gt;?
+
+- Dynamic model of residential sorting, matched to UK economy
+
+- Simulations with/out pollution `\(\rightarrow\)` role of amenity shock
+
+&lt;br&gt;
+
+&lt;u&gt;Important&lt;/u&gt;: why one needs a model for that?
+
+---
+
+# Industrial Pollution and Sorting: Model
+
+An infinitely lived household `\(i\)` living in neighb. `\(j\)` enjoys
+`$$u_{j,t} + \varepsilon_{i,j,t} = g(a_{j,t}, y_t - r_{j,t}) + \varepsilon_{i,j,t},$$`
+where `\(a_{j,t} \equiv\)` amenity, `\(r_{j,t} \equiv\)` land rents, and `\(y_t \equiv\)` income.
+
+Moreover, at each time `\(t\)`, `\((1-\theta) \equiv \mathbb{P}(\text{freely moving from }j) \rightarrow\)`
+
+`$$U_{i,j,t} = u_{j,t} + \varepsilon_{i,j,t} + \beta \theta U_{i,j,t+1} + \beta (1-\theta) E_t V_{t+1}$$`
+is the value of `\(i\)` residing at `\(j\)` and `\(V_t \equiv\)` value if able to such that
+`$$V_t = \max_{j} \left\{ u_{j,t} + \varepsilon_{i,j,t} + \beta \theta U_{i,j,t+1} \right\} + \beta (1-\theta) E_t V_{t+1}$$`
+
+---
+
+# Industrial Pollution and Sorting: Model
+
+As standard, `\(\varepsilon_{i,j,t} \sim\)` EV `\(\rightarrow\)` closed form (gravity-like) sorting.
+
+- What is new here? &lt;u&gt;Answer&lt;/u&gt;: &lt;r&gt;mobility friction `\(\theta\)`&lt;/r&gt;
+
+Bilateral frictions `\(d_{ij} \rightarrow\)` model-implied bilateral flows
+
+- However, estimation needs (inexistent) bilateral flow data
+
+- `\(\theta\)` "does the trick": &lt;r&gt;summarizes relocation rigidities&lt;/r&gt; as a probability to (freely) relocate `\((\theta = 0 \rightarrow\)` static problem)
+
+Thus, model permits separating `\(\theta\)` from
+
+- High-skilled preferences against low-skilled `\((\alpha,\gamma)\)` 
+
+- Discount factor `\(\beta\)`
+
+---
+
+# Industrial Pollution and Sorting: Model
+
+`\(\{ \theta, (\alpha,\gamma), \beta \}\)`: which one &lt;r&gt;matters more for the East-Side story?&lt;/r&gt;
+
+&lt;u&gt;Role of the model&lt;/u&gt;:
+
+- Quantified to match 1971-81 changes in UK (with/out pollution)
+
+- Hypothetical simulations of 1971-2011 with/out these channels
+
+- Hypothetical simulation without pollution
+
+- Also, the role of other policies (e.g., social housing)
+
+&lt;br&gt;
+
+&lt;u&gt;Takeaway&lt;/u&gt;: pollution-driven persistency `\(\rightarrow\)` for today's UK cities
+
+- Could you assess it without a model-generated counterfactual?
+
+---
+
+&lt;u&gt;Structural estimation&lt;/u&gt;: GMM with instruments (e.g., chimney IV)
+
+.center[&lt;img src="figs/heblich14.png" style="width: 80%" /&gt;]
+
+- 10 years `\(\theta = .47 \rightarrow\)` average tenure = 14 years
+
+- `\(\alpha_1 &lt; 0 \rightarrow\)` homophily (high-skilled value negatively low-skill)
+
+---
+
+&lt;u&gt;Model validation&lt;/u&gt;: estimated to 1971-81, simulated up to 2011
+
+.center[&lt;img src="figs/heblich15.png" style="width: 80%" /&gt;]
+
+Close fit for 2011 reassures model's performance
+
+---
+
+&lt;u&gt;Main counterfactual&lt;/u&gt;: baseline (x-axis) vs. no-pollution (y-axis)
+
+.center[&lt;img src="figs/heblich16.png" style="width: 100%" /&gt;]
+
+Values on `\(45^\circ\)` line: pollution does not matter!
+
+- In fact, it &lt;r&gt;matters only for top-pollution cities&lt;/r&gt; (darker circles)
+
+Punchline: Pollution `\(\uparrow\)` dissimilarity (i.e., polarization) in those cities (now and then)!
+
+---
+class: inverse, center, middle
+count: false
+
+# Cities and the Environment: Coastal
+
+# Flooding, Development, and Inequality
+
+---
+
+# Coastal Flood (Policies) and Urban Development
+
+&lt;u&gt;Question&lt;/u&gt;: how would &lt;g&gt;coastal flooding&lt;/g&gt; affect Jakarta (Hsiao, 2023)
+
+- Idea: flooded areas reduce &lt;r&gt;land availability&lt;/r&gt; `\(L_j\)` (capital damages `\(\rightarrow\)` lower potential for real estate development)
+  
+- Government protects flood-prone areas with a seawall
+
+&lt;u&gt;Moral hazard arises&lt;/u&gt; without gov. commitment:
+
+- &lt;r&gt;Developers anticipate government&lt;/r&gt; protecting highly developed regions `\(\rightarrow\)` coastal lock-in
+
+- Government sticking with policy (full commitment) avoids that
+
+Would that matter for **future coastal flooding?**
+
+- We need a model for that (why?)
+
+---
+
+# Coastal Flood (Policies) and Urban Development
+  
+Canonical spatial model: residents in neighb. `\(n\)`, `\(H_{Rn}\)`, is
+
+`$$H_{Rn} = \frac{B_n (v_n / \mathcal{P}_n)^\epsilon}{\sum_i B_i (v_i / \mathcal{P}_i)^\epsilon} \mathcal{L}, \text{ where}$$`
+`$$\mathcal{P}_n = \text{price index}_n \equiv f(r_n^{\alpha}),$$`
+and `\(r_n \equiv\)` floor space prices in `\(n\)` (and `\(\alpha \equiv\)` land preferences share).
+
+- In &lt;g&gt;general equilibrium&lt;/g&gt;, `\(d H_{Rn} / d L_n &gt;0\)` because of &lt;r&gt;GE effects in land prices&lt;/r&gt; `\(r_n\)` (why?)
+
+- Coastal flood `\(\downarrow L_n\)`, but government response compesates that
+
+---
+
+# Coastal Flood (Policies) and Urban Development
+
+This is &lt;u&gt;very rich project&lt;/u&gt;, where
+
+1. Floor-space demand: estimated with cost-shifters
+
+2. Floor-space supply: estimated with demand shifters
+
+3. Flood risk: measured with a &lt;r&gt;hydrological model&lt;/r&gt;
+
+4. Government policy (seawall) cost: estimates by engineers
+
+With 1-4, one simulates model for next centuries
+
+- And simulates &lt;r&gt;alternative policies&lt;/r&gt; for evaluation
+
+--
+
+&lt;u&gt;Too much for today&lt;/u&gt;:
+
+- Focus on hydrological model (environmental piece)
+- Main experiments and takeaways
+
+---
+
+# Coastal Flood (Policies) and Urban Development
+
+&lt;u&gt;Hydrological model&lt;/u&gt;: flood risk depends on &lt;r&gt;several features&lt;/r&gt;
+
+- Elevation (compared to sea level)
+
+- Terrain characteristics
+
+- Rainfall patterns
+
+- Closeness to water bodies (e.g., rivers and canals)
+
+How to measure their importance, so that one can measure how government policies (i.e., seawalls) `\(\downarrow\)` flood risk?
+
+---
+
+# Coastal Flood (Policies) and Urban Development
+
+&lt;u&gt;Solution&lt;/u&gt;: data-science approach `\(\rightarrow\)` &lt;r&gt;machine learning model&lt;/r&gt; that predicts flood risk
+
+- Idea: interaction of these (and other) features is complex
+
+- Using observed flooding data, train a random tree ML model
+
+- Identifies most important features and avoids &lt;y&gt;overfitting&lt;/y&gt;
+
+Trained ML model `\(\rightarrow\)` quantifying the effects of sea walls in `\(\downarrow\)` flood risk at granular level
+
+- Usefull for counterfactuals with seawalls
+
+---
+
+# Coastal Flood (Policies) and Urban Development
+
+.pull-left[
+&lt;img src="https://brunoconteleite.github.io/08-geospatial-ds-bse/figs/hsiao_1.png" style="width: 100%" /&gt;
+]
+.pull-right[
+&lt;img src="https://brunoconteleite.github.io/08-geospatial-ds-bse/figs/hsiao_2.png" style="width: 80%" /&gt;
+]
+
+Then, (future) changes to spatial inputs `\(\rightarrow \Delta L_n \equiv\)` spatial shock
+
+- GE effects of future flood + counterfactual scenarios (e.g., with or without sea walls)
+
+---
+
+# Coastal Flood (Policies) and Urban Development
+
+.center[
+&lt;img src="figs/hsiao_3.png" style="width: 100%" /&gt;
+]
+
+&lt;u&gt;First best&lt;/u&gt;: Government commiting to optimal defense at start
+
+- No commitment: developers overbuild in coastal areas
+
+- Important: moral hazard losses `\(&gt;\)` no defense at all!
+
+---
+
+# Coastal Flood (Policies) and Urban Development
+
+Advantages of a model: simulate &lt;r&gt;policy experiments&lt;/r&gt;
+
+.center[
+&lt;img src="figs/hsiao_4.png" style="width: 100%" /&gt;
+]
+
+&lt;u&gt;Government subsidies&lt;/u&gt; for inland retreat `\(\downarrow\)` coastal development
+
+---
+
+# Taking Stock: Cities and the Environment
+
+&lt;u&gt;Today&lt;/u&gt;: two (amazing) papers thinking on environment as
+
+- Amenity shock `\(\rightarrow\)` past and present segregation
+
+- Land shock in coastal regions `\(\rightarrow\)` moral hazard from real estate
+
+More broadly, we have &lt;u&gt;so far covered topics where&lt;/u&gt;
+
+- Economy `\(\rightarrow\)` environment (class 1)
+
+- Environment `\(\rightarrow\)` economy (today)
+
+&lt;u&gt;Next class&lt;/u&gt;: what if both forces happen &lt;r&gt;together?&lt;/r&gt;
+
+- Integrated Assessment Models `\(\rightarrow\)` co-evolution of economy and environment!
+
+---
+class: inverse, center, middle
+count: false
+
+# See you next class!
+
+---
+
+# References
+
+
+- Heblich, S., Trew, A. and Zylberberg, Y., 2021. East-side story: Historical pollution and persistent neighborhood sorting. *Journal of Political Economy*, 129(5), pp.1508-1552.
+
+- Hsiao, A., 2023. Sea level rise and urban adaptation in Jakarta. *Working Paper*.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
